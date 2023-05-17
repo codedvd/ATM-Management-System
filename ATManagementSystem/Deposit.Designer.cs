@@ -32,9 +32,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.Back = new System.Windows.Forms.Label();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.DepoAmtTb = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -74,16 +74,17 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "ATM SYSTEM MANAGEMENT";
             // 
-            // label5
+            // Back
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label5.Location = new System.Drawing.Point(331, 287);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 26);
-            this.label5.TabIndex = 49;
-            this.label5.Text = "LOGOUT";
+            this.Back.AutoSize = true;
+            this.Back.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Back.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.Back.Location = new System.Drawing.Point(331, 287);
+            this.Back.Name = "Back";
+            this.Back.Size = new System.Drawing.Size(51, 26);
+            this.Back.TabIndex = 49;
+            this.Back.Text = "Back";
+            this.Back.Click += new System.EventHandler(this.label5_Click);
             // 
             // bunifuThinButton21
             // 
@@ -109,14 +110,15 @@
             this.bunifuThinButton21.Size = new System.Drawing.Size(151, 59);
             this.bunifuThinButton21.TabIndex = 48;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
-            // textBox1
+            // DepoAmtTb
             // 
-            this.textBox1.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F);
-            this.textBox1.Location = new System.Drawing.Point(248, 150);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(252, 35);
-            this.textBox1.TabIndex = 47;
+            this.DepoAmtTb.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F);
+            this.DepoAmtTb.Location = new System.Drawing.Point(248, 150);
+            this.DepoAmtTb.Name = "DepoAmtTb";
+            this.DepoAmtTb.Size = new System.Drawing.Size(252, 35);
+            this.DepoAmtTb.TabIndex = 47;
             // 
             // label13
             // 
@@ -157,9 +159,9 @@
             this.ClientSize = new System.Drawing.Size(578, 377);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.Back);
             this.Controls.Add(this.bunifuThinButton21);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.DepoAmtTb);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -179,9 +181,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label Back;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox DepoAmtTb;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;

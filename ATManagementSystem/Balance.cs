@@ -29,12 +29,13 @@ namespace ATManagementSystem
             SqlDataAdapter sda = new SqlDataAdapter(" select Balance from AccountTbl where AccNum ='"+AccNumberlbl.Text+"'", Con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
-            Balancelbl.Text = dt.Rows[0][0].ToString();
+            Balancelbl.Text = "NG " + dt.Rows[0][0].ToString();
             Con.Close();
         }
         private void Balance_Load(object sender, EventArgs e)
         {
             AccNumberlbl.Text = Home.AccNumber;
+            getbalance();
         }
 
         private void label4_Click(object sender, EventArgs e)

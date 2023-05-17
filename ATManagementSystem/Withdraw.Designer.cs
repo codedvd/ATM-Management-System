@@ -32,13 +32,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.wdamtTb = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.balancelbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -89,14 +89,15 @@
             this.bunifuThinButton21.Size = new System.Drawing.Size(151, 59);
             this.bunifuThinButton21.TabIndex = 53;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
-            // textBox1
+            // wdamtTb
             // 
-            this.textBox1.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F);
-            this.textBox1.Location = new System.Drawing.Point(224, 204);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(252, 35);
-            this.textBox1.TabIndex = 52;
+            this.wdamtTb.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F);
+            this.wdamtTb.Location = new System.Drawing.Point(224, 204);
+            this.wdamtTb.Name = "wdamtTb";
+            this.wdamtTb.Size = new System.Drawing.Size(252, 35);
+            this.wdamtTb.TabIndex = 52;
             // 
             // label13
             // 
@@ -151,29 +152,29 @@
             this.panel2.Size = new System.Drawing.Size(570, 10);
             this.panel2.TabIndex = 56;
             // 
-            // label3
+            // balancelbl
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label3.Location = new System.Drawing.Point(220, 138);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(173, 26);
-            this.label3.TabIndex = 57;
-            this.label3.Text = "AVAILABLE BALANCE";
+            this.balancelbl.AutoSize = true;
+            this.balancelbl.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.balancelbl.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.balancelbl.Location = new System.Drawing.Point(220, 138);
+            this.balancelbl.Name = "balancelbl";
+            this.balancelbl.Size = new System.Drawing.Size(173, 26);
+            this.balancelbl.TabIndex = 57;
+            this.balancelbl.Text = "AVAILABLE BALANCE";
             // 
             // Withdraw
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(570, 370);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.balancelbl);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.bunifuThinButton21);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.wdamtTb);
             this.Controls.Add(this.label13);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Withdraw";
@@ -192,12 +193,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox wdamtTb;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label balancelbl;
     }
 }

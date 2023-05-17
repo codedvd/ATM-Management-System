@@ -19,8 +19,8 @@ namespace ATManagementSystem
 
         private void label5_Click(object sender, EventArgs e)
         {
-            Home home = new Home();
-            home.Show();
+            Login log = new Login();
+            log.Show();
             this.Hide();
         }
 
@@ -44,7 +44,33 @@ namespace ATManagementSystem
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
+            Deposit depo = new Deposit();
+            depo.Show();
+            this.Hide();
+        }
 
+        private void bunifuThinButton24_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuThinButton25_Click(object sender, EventArgs e)
+        {
+            ChangePin Pin = new ChangePin();
+            Pin.Show();
+            this.Hide();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void bunifuThinButton22_Click(object sender, EventArgs e)
+        {
+            Withdraw wid = new Withdraw();
+            wid.Show();
+            this.Hide();
         }
     }
 }

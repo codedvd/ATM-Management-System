@@ -35,8 +35,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Pin2Tb = new System.Windows.Forms.TextBox();
+            this.Pin1Tb = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -121,22 +121,23 @@
             this.bunifuThinButton21.Size = new System.Drawing.Size(151, 59);
             this.bunifuThinButton21.TabIndex = 43;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
-            // textBox2
+            // Pin2Tb
             // 
-            this.textBox2.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F);
-            this.textBox2.Location = new System.Drawing.Point(232, 176);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(252, 35);
-            this.textBox2.TabIndex = 42;
+            this.Pin2Tb.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F);
+            this.Pin2Tb.Location = new System.Drawing.Point(232, 176);
+            this.Pin2Tb.Name = "Pin2Tb";
+            this.Pin2Tb.Size = new System.Drawing.Size(252, 35);
+            this.Pin2Tb.TabIndex = 42;
             // 
-            // textBox1
+            // Pin1Tb
             // 
-            this.textBox1.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F);
-            this.textBox1.Location = new System.Drawing.Point(232, 113);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(252, 35);
-            this.textBox1.TabIndex = 41;
+            this.Pin1Tb.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 18F);
+            this.Pin1Tb.Location = new System.Drawing.Point(232, 113);
+            this.Pin1Tb.Name = "Pin1Tb";
+            this.Pin1Tb.Size = new System.Drawing.Size(252, 35);
+            this.Pin1Tb.TabIndex = 41;
             // 
             // label5
             // 
@@ -145,9 +146,10 @@
             this.label5.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label5.Location = new System.Drawing.Point(312, 305);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 26);
+            this.label5.Size = new System.Drawing.Size(51, 26);
             this.label5.TabIndex = 45;
-            this.label5.Text = "LOGOUT";
+            this.label5.Text = "Back";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // panel2
             // 
@@ -166,8 +168,8 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.bunifuThinButton21);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Pin2Tb);
+            this.Controls.Add(this.Pin1Tb);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.panel1);
@@ -175,6 +177,7 @@
             this.Name = "ChangePin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChangePin";
+            this.Load += new System.EventHandler(this.ChangePin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -190,8 +193,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label13;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Pin2Tb;
+        private System.Windows.Forms.TextBox Pin1Tb;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel2;
     }
