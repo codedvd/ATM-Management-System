@@ -51,7 +51,9 @@ namespace ATManagementSystem
 
         private void bunifuThinButton24_Click(object sender, EventArgs e)
         {
-
+            Ministatement mini = new Ministatement();
+            mini.Show();
+            this.Hide();
         }
 
         private void bunifuThinButton25_Click(object sender, EventArgs e)
@@ -70,6 +72,13 @@ namespace ATManagementSystem
         {
             Withdraw wid = new Withdraw();
             wid.Show();
+            this.Hide();
+        }
+
+        private void bunifuThinButton23_Click(object sender, EventArgs e)
+        {
+            FASTCASH fcash = new FASTCASH();
+            fcash.Show();
             this.Hide();
         }
     }

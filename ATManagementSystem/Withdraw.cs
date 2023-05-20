@@ -36,10 +36,31 @@ namespace ATManagementSystem
             bal = Convert.ToInt32(dt.Rows[0][0].ToString());
             Con.Close();
         }
+        private void addtransaction()
+        {
+            string TrType = "WithDraw";
+            try
+            {
+                Con.Open();
+                string query = "insert into TransactionTbl values('" + Acc + "','" + TrType + "','" + wdamtTb.Text + "','" + DateTime.Today.Date.ToString() + "')";
+                SqlCommand cmd = new SqlCommand(query, Con);
+                cmd.ExecuteNonQuery();
+                // MessageBox.Show("Account Created Succesfully");
+                Con.Close();
+                Login log = new Login();
+                log.Show();
+                this.Hide();
+            }
+            catch (Exception Ex)
+            {
+                MessageBox.Show(Ex.Message);
+            }
+        }
         private void Withdraw_Load(object sender, EventArgs e)
         {
             getbalance();
         }
+        int  newbalance;
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
@@ -56,8 +77,39 @@ namespace ATManagementSystem
             }
             else
             {
-
+                try
+                {
+                    newbalance = bal - Convert.ToInt32(wdamtTb.Text);
+                    try
+                    {
+                        Con.Open();
+                        string query = "update AccountTbl set Balance=" + newbalance + " where Accnum='" + Acc + "';";
+                        SqlCommand cmd = new SqlCommand(query, Con);
+                        cmd.ExecuteNonQuery();
+                        MessageBox.Show("Success Withdraw");
+                        Con.Close();
+                        addtransaction();
+                        Home home = new Home();
+                        home.Show();
+                        this.Hide();
+                    }
+                    catch (Exception Ex)
+                    {
+                        MessageBox.Show(Ex.Message);
+                    }
+                }
+                catch (Exception Ex)
+                {
+                    MessageBox.Show(Ex.Message);
+                }
             }
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Home home = new Home();
+            home.Show();
         }
     }
 }

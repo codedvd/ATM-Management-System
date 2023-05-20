@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FASTCASH));
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuThinButton26 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton25 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton24 = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -40,7 +40,7 @@
             this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.balancelbl = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -67,15 +67,6 @@
             this.panel2.Size = new System.Drawing.Size(657, 78);
             this.panel2.TabIndex = 2;
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 479);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(657, 10);
-            this.panel1.TabIndex = 17;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -88,6 +79,15 @@
             this.label3.Text = "ATM SYSTEM MANAGEMENT";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 479);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(657, 10);
+            this.panel1.TabIndex = 17;
+            // 
             // bunifuThinButton26
             // 
             this.bunifuThinButton26.ActiveBorderThickness = 1;
@@ -97,7 +97,7 @@
             this.bunifuThinButton26.ActiveLineColor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton26.BackColor = System.Drawing.SystemColors.Control;
             this.bunifuThinButton26.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton26.BackgroundImage")));
-            this.bunifuThinButton26.ButtonText = "OTHERS";
+            this.bunifuThinButton26.ButtonText = "NG 100000";
             this.bunifuThinButton26.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuThinButton26.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuThinButton26.ForeColor = System.Drawing.Color.SeaGreen;
@@ -112,6 +112,7 @@
             this.bunifuThinButton26.Size = new System.Drawing.Size(194, 59);
             this.bunifuThinButton26.TabIndex = 23;
             this.bunifuThinButton26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton26.Click += new System.EventHandler(this.bunifuThinButton26_Click);
             // 
             // bunifuThinButton25
             // 
@@ -137,6 +138,7 @@
             this.bunifuThinButton25.Size = new System.Drawing.Size(194, 59);
             this.bunifuThinButton25.TabIndex = 22;
             this.bunifuThinButton25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton25.Click += new System.EventHandler(this.bunifuThinButton25_Click);
             // 
             // bunifuThinButton24
             // 
@@ -162,6 +164,7 @@
             this.bunifuThinButton24.Size = new System.Drawing.Size(194, 59);
             this.bunifuThinButton24.TabIndex = 21;
             this.bunifuThinButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton24.Click += new System.EventHandler(this.bunifuThinButton24_Click);
             // 
             // bunifuThinButton23
             // 
@@ -213,6 +216,7 @@
             this.bunifuThinButton22.Size = new System.Drawing.Size(194, 59);
             this.bunifuThinButton22.TabIndex = 19;
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);
             // 
             // bunifuThinButton21
             // 
@@ -238,6 +242,7 @@
             this.bunifuThinButton21.Size = new System.Drawing.Size(194, 59);
             this.bunifuThinButton21.TabIndex = 18;
             this.bunifuThinButton21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton21.Click += new System.EventHandler(this.bunifuThinButton21_Click);
             // 
             // label2
             // 
@@ -250,16 +255,16 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "FAST CASH";
             // 
-            // label4
+            // balancelbl
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label4.Location = new System.Drawing.Point(247, 223);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(152, 37);
-            this.label4.TabIndex = 24;
-            this.label4.Text = "Available Bal";
+            this.balancelbl.AutoSize = true;
+            this.balancelbl.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.balancelbl.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.balancelbl.Location = new System.Drawing.Point(247, 223);
+            this.balancelbl.Name = "balancelbl";
+            this.balancelbl.Size = new System.Drawing.Size(152, 37);
+            this.balancelbl.TabIndex = 24;
+            this.balancelbl.Text = "Available Bal";
             // 
             // label5
             // 
@@ -271,6 +276,7 @@
             this.label5.Size = new System.Drawing.Size(76, 26);
             this.label5.TabIndex = 37;
             this.label5.Text = "LOGOUT";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // FASTCASH
             // 
@@ -278,7 +284,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(657, 489);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.balancelbl);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.bunifuThinButton26);
             this.Controls.Add(this.bunifuThinButton25);
@@ -292,6 +298,7 @@
             this.Name = "FASTCASH";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FASTCASHcs";
+            this.Load += new System.EventHandler(this.FASTCASH_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -312,7 +319,7 @@
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label balancelbl;
         private System.Windows.Forms.Label label5;
     }
 }
