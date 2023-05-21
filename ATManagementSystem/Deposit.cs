@@ -88,6 +88,11 @@ namespace ATManagementSystem
             }
         }
 
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void label5_Click(object sender, EventArgs e)
         {
             Home home = new Home(); 

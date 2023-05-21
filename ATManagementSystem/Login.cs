@@ -64,7 +64,11 @@ namespace ATManagementSystem
                 home.Show();
                 this.Hide();
                 Con.Close();
-            }else
+            }else if (dt.Rows[0][0].ToString() == "")
+            {
+                MessageBox.Show("You have to insert some your Acc Number and Pin");
+            }
+            else
             {
                 MessageBox.Show("Wrong Account Number or PIN Code");
             }

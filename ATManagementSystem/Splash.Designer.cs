@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Splash));
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MyProgress = new System.Windows.Forms.ProgressBar();
-            this.label3 = new System.Windows.Forms.Label();
+            this.Percentage = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,30 +67,36 @@
             this.MyProgress.TabIndex = 3;
             this.MyProgress.Click += new System.EventHandler(this.progressBar1_Click);
             // 
-            // label3
+            // Percentage
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(296, 278);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 37);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "%";
+            this.Percentage.AutoSize = true;
+            this.Percentage.Font = new System.Drawing.Font("Franklin Gothic Medium Cond", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Percentage.ForeColor = System.Drawing.Color.White;
+            this.Percentage.Location = new System.Drawing.Point(296, 278);
+            this.Percentage.Name = "Percentage";
+            this.Percentage.Size = new System.Drawing.Size(39, 37);
+            this.Percentage.TabIndex = 4;
+            this.Percentage.Text = "%";
             // 
-            // Form1
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // Splash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSlateGray;
             this.ClientSize = new System.Drawing.Size(666, 354);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.Percentage);
             this.Controls.Add(this.MyProgress);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Form1";
+            this.Name = "Splash";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Splash_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -100,7 +108,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ProgressBar MyProgress;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label Percentage;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

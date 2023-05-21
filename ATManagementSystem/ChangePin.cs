@@ -21,7 +21,9 @@ namespace ATManagementSystem
 
         private void label5_Click(object sender, EventArgs e)
         {
-
+            Home home = new Home();
+            home.Show();
+            this.Hide();
         }
         SqlConnection Con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Decagon\Documents\ATMDb.mdf;Integrated Security=True;Connect Timeout=30");
         string Acc = Login.AccNumber;
@@ -58,6 +60,11 @@ namespace ATManagementSystem
         private void ChangePin_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
